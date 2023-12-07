@@ -1,6 +1,7 @@
 node {
     stage('git checkout') {
         git 'file:///C:/Projects/SsdtDevOpsDemo'
+
     }
     
     stage('Build Dacpac from SQLProj') {  
