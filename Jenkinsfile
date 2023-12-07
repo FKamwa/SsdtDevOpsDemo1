@@ -6,7 +6,7 @@ node {
     
     stage('Build Dacpac from SQLProj') {  
         bat "\"${tool name: 'Default', type: 'msbuild'}\" /p:Configuration=Release"
-        stash includes: 'SsdtDevOpsDemo\\bin\\Release\\SsdtDevOpsDemo.dacpac', name: 'theDacpac'
+        stash includes: 'Database1\\bin\\Release\\Database1.dacpac', name: 'theDacpac'
     }
  
     stage('Deploy Dacpac to SQL Server') {
